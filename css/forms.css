@@ -2,6 +2,19 @@ ul {
   list-style: none;
 }
 
+form {
+  background: #f9f9f9;
+  border: none;
+  width: 700px;
+  padding: 1rem;
+  color: #000;
+  /*  margin-top: 1em; */
+  box-shadow: 2px 2px 2px #b7b4b4;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
 /* This inherit from the parent's values */
 input,
 textarea,
@@ -18,6 +31,23 @@ input:focus,
 textarea:focus {
   background: rgba(0, 0, 0, 0.1); /* NB! Bytt denne fargen! */
 }
+
+button {
+  background: green;
+  padding: 0.3em;
+  color: white;
+  margin-top: 10px;
+  border-radius: 5%;
+  text-transform: uppercase;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background: #707070;
+}
+
 /* Stops IE from showing a scroll bar when not needed */
 textarea {
   overflow: auto;
@@ -45,4 +75,14 @@ input:invalid {
 }
 input:focus:invalid {
   outline: none;
+}
+
+/* ================
+    Media Queries 
+  =================== */
+
+@media (min-width: 600px) {
+  form {
+    display: flex;
+  }
 }
