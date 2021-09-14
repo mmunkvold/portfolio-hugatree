@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" />
+    <!--  -->
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Contact me</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button class="hamburger-icons">
+          <i class="fas fa-bars"></i>
+          <i class="fas fa-times"></i>
+        </button>
+
+        <div class="site-title">
+          <h1>Hug a Tree</h1>
+          <p class="subtitle">and be happy!</p>
+        </div>
+
+        <img id="logo" src="logo.png" alt="drawing of a person hugging a tree" />
+
+        <ul class="main-menu">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="blogposts.html">All posts</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="horizontal-line"></div>
+      </nav>
+    </header>
+    <h1>Contact me</h1>
+    <div class="success">Thank you for contacting me! I'll get back to you soon.</div>
+    <form action="" method="POST">
+      <div><p>Required fields are marked with <abbr title="required">*</abbr></p>
+      <!-- See if maybe remove the ul and li -->
+      <ul>
+        <li>
+          <label for="fullname">Name:<abbr title="required" aria-label="required">*</abbr></label>
+          <input type="text" id="fullname" name="fullname" />
+          <div class="error">Name should be at least 6 characters long</div>
+        </li>
+        <li>
+          <label for="email">Email:<abbr title="required" aria-label="required">*</abbr></label>
+          <input type="email" id="email" name="email" />
+          <div class="error">Please fill in a valid email address</div>
+        </li>
+        <li></ul></div>
+          <div><ul>
+          <label for="subject">Subject: <abbr title="required" aria-label="required"> *</abbr></label>
+          <input type="text" id="subject" name="subject" />
+          <div class="error">Subject should be at least 16 characters long</div>
+        </li>
+        <li>
+          <label for="message">Your message:<abbr title="required" aria-label="required">*</abbr></label>
+          <textarea name="message" id="message" cols="25" rows="8"></textarea>
+          <div class="error">Message should be at least 26 characters long</div>
+        </li>
+        <li>
+          <label for="file">Attach your image: </label> <input type="file" name="file" id="file" accept="image/*;capture=camera" multiple />
+          <div class="error">You can only send images in jpg, jpeg, or png.</div>
+        </li>
+
+        <li>
+          <button type="submit">Send your message</button>
+        </li>
+      </ul></div>
+    </form>
+    <!-- <script src="js/displayError.js"></script> -->
+    <script src="js/contact.js"></script>
+  </body>
+</html>

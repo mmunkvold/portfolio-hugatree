@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" />
+    <!--  -->
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Blogposts</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button class="hamburger-icons">
+          <i class="fas fa-bars"></i>
+          <i class="fas fa-times"></i>
+        </button>
+
+        <div class="site-title">
+          <h1>Hug a Tree</h1>
+          <p class="subtitle">and be happy!</p>
+        </div>
+
+        <img id="logo" src="logo.png" alt="drawing of a person hugging a tree" />
+
+        <ul class="main-menu">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link active" href="blogposts.html">All posts</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="horizontal-line"></div>
+      </nav>
+    </header>
+    <h1>These are all the wonderful posts on this blog</h1>
+
+    <div class="results">Loading...</div>
+    <button>See more posts</button>
+    <p></p>
+    <script src="js/blogposts.js"></script>
+    <script src="js/components/displayError.js"></script>
+  </body>
+</html>
