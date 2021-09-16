@@ -25,6 +25,7 @@
 
         <div class="site-title">
           <h1>Hug a Tree</h1>
+          <!-- Not h1 here? -->
           <p class="subtitle">and be happy!</p>
         </div>
 
@@ -39,44 +40,79 @@
         <div class="horizontal-line"></div>
       </nav>
     </header>
-    <main>
-      <div class="newest-label">Newest post</div>
-      <div class="newest">
-        <div>Loading...</div>
-      </div>
-      <div class="latest-wrapper">
-        <div class="latest-carousel">
+    <div class="wrapper">
+      <main>
+        <div class="newest-label">Newest post</div>
+        <div class="newest">
           <div>Loading...</div>
-          <div class="carousel-item"></div>
         </div>
-        <div class="carousel-actions">
-          <button class="prev-btn" aria-label="Previous slide"><</button>
-          <button class="next-btn" aria-label="Next slide">></button>
-        </div>
-      </div>
-      <div class="featured">
-        <div>Loading...</div>
-      </div>
-    </main>
-    <aside>
-      <div class="about">
-        <h2>About me</h2>
-        <img src="images/freaks.jpg" alt="a woman in a white winter hat and green jacket smiling at the camera while hugging a tree" />
-        <p>I'm Monica, from Norway. And I love to hug trees!</p>
-        <p>I believe that hugging trees improves our quality of life. And connecting with trees, make us care more for the trees as well.</p>
-        <p>Why don't you join me?</p>
-      </div>
 
-      <form id="search-form" action="#" method="GET">
-        <label for="search"></label><input type="search" id="search" placeholder="Search this site..." />
-        <button class="search-btn" type="submit">go</button>
-      </form>
-      
-      <div class="random-quote">
-        <div>Loading...</div>
-      </div>
-      <!-- <div class="category-list">Categories here</div> -->
-    </aside>
+        <div class="latest-wrapper">
+          <div class="latest-carousel">
+            <div>Loading...</div>
+            <div class="carousel-item"></div>
+          </div>
+          <div class="carousel-actions">
+            <button class="prev-btn" aria-label="Previous slide"><</button>
+            <button class="next-btn" aria-label="Next slide">></button>
+          </div>
+        </div>
+        <h2>Featured Posts</h2>
+        <div class="featured">
+          <div>Loading...</div>
+        </div>
+        <div class="horizontal-line"></div>
+
+        <h2>Tree huggers around the world!</h2>
+        <div class="gallery">
+          <div class="gallery-item gallery-item-1">
+            <img src="images/gallery/mask.jpg" alt="a woman wearing a mask hugging a tree" />
+          </div>
+          <div class="gallery-item gallery-item-2">
+            <img src="images/gallery/hands.jpg" alt="two hands holding birch trees" />
+          </div>
+          <div class="gallery-item gallery-item-3">
+            <img src="images/gallery/bluedress.jpg" alt="a woman in a blue dress hugging a tree" />
+          </div>
+          <div class="gallery-item gallery-item-4">
+            <img src="images/gallery/touch.jpg" alt="a woman wearing a white winter hat and winter jacket hugging a tree" />
+          </div>
+          <div class="gallery-item gallery-item-5">
+            <img src="images/gallery/blackdress.jpg" alt="a woman wearing a black dress hugging a tree with her eyes closed" />
+          </div>
+          <div class="gallery-item gallery-item-6">
+            <img src="images/gallery/winter.jpg" alt="a man in winter landscape hugging a tree" />
+          </div>
+          <div class="gallery-item gallery-item-7">
+            <img src="images/gallery/koala.jpg" alt="a koala bear sleeping on a tree branch" />
+          </div>
+          <div class="gallery-item gallery-item-8">
+            <img src="images/gallery/redjacket.jpg" alt="a man wearing a red jacket hugging a tall tree" />
+          </div>
+        </div>
+        <p>Send me your photos and I'll show them here!</p>
+      </main>
+      <aside>
+        <div class="about">
+          <h2>About me</h2>
+          <img src="images/freaks.jpg" alt="a woman in a white winter hat and green jacket smiling at the camera while hugging a tree" />
+          <p>I'm Monica, from Norway. And I love to hug trees!</p>
+          <p>I believe that hugging trees improves our quality of life. And connecting with trees, make us care more for the trees as well.</p>
+          <p>Why don't you join me?</p>
+        </div>
+
+        <form id="search-form" action="#" method="GET">
+          <label for="search"></label>
+          <input type="search" id="search" placeholder="Search this site..." />
+          <button class="search-btn" type="submit">go</button>
+        </form>
+
+        <div class="random-quote">
+          <div>Loading...</div>
+        </div>
+        <!-- <div class="category-list">Categories here</div> -->
+      </aside>
+    </div>
 
     <script src="js/components/search.js"></script>
     <script src="js/components/mainmenu.js"></script>
