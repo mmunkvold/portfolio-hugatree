@@ -301,7 +301,34 @@ footer ul {
 footer a {
   color: #fff;
 }
+/* ================
+    ABOUT PAGE 
+  =================== */
 
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================
+    BLOG POSTS PAGE 
+  =================== */
+
+.results {
+  display: grid;
+  gap: 1em;
+  border: 5px solid pink;
+}
+
+.result-item {
+  border: 2px solid grey;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.results img {
+  width: 100%;
+}
 /* ================
     Miscellanous 
   =================== */
@@ -331,6 +358,9 @@ figcaption {
   font-size: smaller;
 }
 
+.italic {
+  font-style: italic;
+}
 /* Image Modal */
 /* The Modal (background) */
 .modal {
@@ -552,6 +582,16 @@ figcaption {
   .main-menu a {
     color: #000;
   }
+  .results {
+    grid-template-columns: 1fr 1fr;
+  }
+  .result-item {
+    width: 700px;
+    display: flex;
+  }
+  .results img {
+    width: 100%;
+  }
 }
 
 /* =========================== */
@@ -568,6 +608,11 @@ figcaption {
   .carousel-actions {
     position: absolute;
     top: 100em;
+  }
+  .container {
+    width: 65ch;
+    padding: 1.5em;
+    margin: 0 auto;
   }
 }
 
@@ -598,6 +643,12 @@ figcaption {
 
   #logo {
     left: 18em;
+  }
+  .container {
+    flex-direction: row;
+    width: 100%;
+    padding: 2em;
+    gap: 3em;
   }
 }
 @media (min-width: 1300px) {
