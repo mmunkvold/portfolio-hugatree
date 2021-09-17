@@ -27,7 +27,7 @@ getNewestPost();
 
 function createHTML(result) {
   console.log("this html works");
-  newestPostContainer.innerHTML = `<div class="newest"><div><h1 class="newest-title">${result.title.rendered}</h1><div class="newest-content>${result.content.rendered}</div></div></div>`;
+  newestPostContainer.innerHTML = `<div class="newest"><div><a href="singlepost.html?id=${result.id}"><h1>${result.title.rendered}</h1></a></div><div>${result.content.rendered}</div></div></div>`;
 }
 
 //===========================================//
@@ -69,7 +69,7 @@ async function getLatestPosts() {
 
       for (let i = firstPost; i < firstPost + 4; i++) {
         console.log(i);
-        latestPostContainer.innerHTML += `<div class="latest-carousel"><div class="carousel-item"><a href="singlepost.html?id=${results[i].id}"><div class="">${results[i].title.rendered} </div><img class="" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}"></img></a><div>${results[i].excerpt.rendered}</div></div><div class="carousel-actions"></div></div>`;
+        latestPostContainer.innerHTML += `<div class="latest-carousel"><div class="carousel-item"><a href="singlepost.html?id=${results[i].id}"><h3>${results[i].title.rendered}</h3> <img class="" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}"></img></a><div>${results[i].excerpt.rendered}</div></div></div>`;
         previousBtn.style.display = "block";
         nextBtn.style.display = "block";
       }
@@ -85,7 +85,7 @@ async function getLatestPosts() {
       }
       for (let i = firstPost; i < firstPost + 4; i++) {
         console.log(i);
-        latestPostContainer.innerHTML += `<div class="latest-carousel"><div class="carousel-item"><a href="singlepost.html?id=${results[i].id}"><div class="">${results[i].title.rendered} </div><img class="" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}"></img></a><div>${results[i].excerpt.rendered}</div></div><div class="carousel-actions"></div></div>`;
+        latestPostContainer.innerHTML += `<div class="latest-carousel"><div class="carousel-item"><a href="singlepost.html?id=${results[i].id}"><h3>${results[i].title.rendered}</h3> <img class="" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}"></img></a><div>${results[i].excerpt.rendered}</div></div></div>`;
         previousBtn.style.display = "block";
         nextBtn.style.display = "block";
       }
@@ -115,7 +115,7 @@ async function getFeaturedPosts() {
         break;
       }
       console.log("this html section works at least");
-      featuredPostContainer.innerHTML += `<div class="featured"><div class="featured-item"><h3>${results[i].title.rendered}</h3><p>${results[i].excerpt.rendered}</p><img class="" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url}"/></div></div>`;
+      featuredPostContainer.innerHTML += `<div class="featured"><div class="featured-item "><a href="singlepost.html?id=${results[i].id}"><h3>${results[i].title.rendered}</h3><p>${results[i].excerpt.rendered}</p><div class="featured-item featured-item-noborder"><img class="" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url}"/></a></div></div></div>`;
     }
   } catch (error) {
     console.log("something very strange here...");

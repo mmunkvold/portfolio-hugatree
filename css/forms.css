@@ -5,8 +5,8 @@ ul {
 form {
   background: #f9f9f9;
   border: none;
-  width: 700px;
-  padding: 1rem;
+  width: 360px;
+  padding: 1em 0;
   color: #000;
   /*  margin-top: 1em; */
   box-shadow: 2px 2px 2px #b7b4b4;
@@ -21,10 +21,11 @@ textarea,
 button {
   font-family: inherit;
   font-size: 80%;
-  width: 200px;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+  width: 280px;
+  margin: 0.5em 0;
+  /*  padding: 0;
+  margin: 0; */
+  /* box-sizing: border-box; */
 }
 
 input:focus,
@@ -32,25 +33,39 @@ textarea:focus {
   background: rgba(0, 0, 0, 0.1); /* NB! Bytt denne fargen! */
 }
 
-button {
-  background: green;
-  padding: 0.3em;
-  color: white;
-  margin-top: 10px;
-  border-radius: 5%;
-  text-transform: uppercase;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-button:hover,
-button:focus {
-  background: #707070;
-}
-
 /* Stops IE from showing a scroll bar when not needed */
 textarea {
   overflow: auto;
+  background-image: url("../summertree.png");
+  background-repeat: no-repeat;
+  background-size: 15%;
+  opacity: 30%;
+  background-position: bottom right;
+}
+
+#search-form {
+  width: 100%;
+  background: #fff;
+  box-shadow: none;
+  /*  margin-bottom: 2em; */
+  border-radius: 0.2rem;
+  cursor: pointer;
+  padding: 1em;
+  position: absolute;
+  top: 6em;
+  text-align: center;
+  /* left: 2em; */
+}
+
+#search {
+  text-align: center;
+  font-family: inherit;
+  width: 250px;
+}
+
+#search-btn {
+  /*   background-color: hotpink; */
+  width: 50px;
 }
 
 /* Styling the error handling on the form */
@@ -84,5 +99,14 @@ input:focus:invalid {
 @media (min-width: 600px) {
   form {
     display: flex;
+    flex-direction: row;
+    width: 700px;
+  }
+
+  #search-form {
+    width: 350px;
+    top: 1em;
+    left: 60em;
+    padding: 0;
   }
 }

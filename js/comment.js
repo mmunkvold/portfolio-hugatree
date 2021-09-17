@@ -1,9 +1,12 @@
 //-	Name (Should be more than 5 characters long)
 //-	Email address (Must be a valid email address)
-//-	Subject (Should be more than 15 characters long)
+//- Website address (Must be a valid website address)
 //-	Message content (Should be more than 25 characters long)
 
 const form = document.querySelector("form");
+
+const comment = document.getElementById("comment");
+const commentError = document.querySelector("#comment + div.error");
 
 const fullName = document.getElementById("fullname");
 const fullNameError = document.querySelector("#fullname + div.error");
@@ -11,23 +14,19 @@ const fullNameError = document.querySelector("#fullname + div.error");
 const email = document.getElementById("email");
 const emailError = document.querySelector("#email + div.error");
 
-const subject = document.getElementById("subject");
-const subjectError = document.querySelector("#subject + div.error");
-
-const message = document.getElementById("message");
-const messageError = document.querySelector("#message + div.error");
-
-const file = document.getElementById("file");
-const fileError = document.querySelector("#file + div.error");
-
-//get this to work, or just remove the file upload from the form
-/* const fileUpload = document.getElementById("file");
-fileUpload.required = false; */
+const website = document.getElementById("website");
+const websiteError = document.querySelector("#website + div.error");
 
 const showSuccessMessage = document.querySelector(".success");
 
 function validateForm(event) {
   event.preventDefault();
+
+  if (checkLength(comment.value, 26) === true) {
+    commentError.style.display = "none";
+  } else {
+    commentError.style.display = "block";
+  }
 
   if (checkLength(fullName.value, 6) === true) {
     fullNameError.style.display = "none";
@@ -41,30 +40,13 @@ function validateForm(event) {
     emailError.style.display = "block";
   }
 
-  if (checkLength(subject.value, 16) === true) {
-    subjectError.style.display = "none";
+  if (validateWebsite(website.value) === true) {
+    websiteError.style.display = "none";
   } else {
-    subjectError.style.display = "block";
+    websiteError.style.display = "block";
   }
 
-  if (checkLength(message.value, 26) === true) {
-    messageError.style.display = "none";
-  } else {
-    messageError.style.display = "block";
-  }
-  if (validateFile(file.value) === true) {
-    fileError.style.display = "none";
-  } else {
-    fileError.style.display = "block";
-  }
-
-  if (
-    checkLength(fullName.value, 6) &&
-    validateEmail(email.value) &&
-    checkLength(subject.value, 16) &&
-    checkLength(message.value, 26) &&
-    validateFile(file.value) === true
-  ) {
+  if (checkLength(fullName.value, 6) && validateEmail(email.value) && checkLength(comment.value, 26) && validateWebsite(website.value) === true) {
     showSuccessMessage.style.display = "block";
     form.style.display = "none";
   } else {
@@ -88,8 +70,8 @@ function validateEmail(email) {
   return patternMatches;
 }
 
-function validateFile(file) {
-  const regEx = /(\.jpg|\.jpeg|\.png)$/i;
-  const patternMatches = regEx.test(file);
+function validateWebsite(website) {
+  const regEx = /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g;
+  const patternMatches = regEx.test(website);
   return patternMatches;
 }

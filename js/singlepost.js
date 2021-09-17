@@ -43,7 +43,7 @@ function createHTML(results) {
   });
   window.addEventListener("click", function (event) {
     if (event.target == overlay) {
-      console.log("close x clicked");
+      /* console.log("close x clicked"); */
       overlay.style.display = "none";
     }
   });

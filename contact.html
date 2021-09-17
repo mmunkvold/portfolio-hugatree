@@ -10,8 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" />
     <!--  -->
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/forms.css" />
+   
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/forms.css" />
     <title>Contact me</title>
   </head>
   <body>
@@ -22,25 +23,32 @@
           <i class="fas fa-times"></i>
         </button>
 
-        <div class="site-title">
-          <h1>Hug a Tree</h1>
-          <p class="subtitle">and be happy!</p>
-        </div>
+        <a href="index.html">
+          <div class="site-title">
+            <h1>Hug a Tree</h1>
+            <!-- Not h1 here? -->
+            <p class="subtitle">and be happy!</p>
+          </div>
+        </a>
+        <a href="index.html"><img id="logo" src="logo.png" alt="drawing of a person hugging a tree" /></a>
 
-        <img id="logo" src="logo.png" alt="drawing of a person hugging a tree" />
-
+        <form id="search-form" action="#" method="GET">
+          <label for="search"></label>
+          <input type="search" id="search" placeholder="Search this site..." />
+          <button id="search-btn" type="submit">go</button>
+        </form>
         <ul class="main-menu">
           <li><a class="nav-link" href="index.html">Home</a></li>
           <li><a class="nav-link" href="blogposts.html">All posts</a></li>
           <li><a class="nav-link" href="about.html">About</a></li>
           <li><a class="nav-link active" href="contact.html">Contact</a></li>
         </ul>
-        <div class="horizontal-line"></div>
+        <div class="horizontal-line-menu"></div>
       </nav>
     </header>
     <h1>Contact me</h1>
     <div class="success">Thank you for contacting me! I'll get back to you soon.</div>
-    <form action="" method="POST">
+    <form action="mailto:hugatree@monicamunkvoldnikolaisen.no" method="POST">
       <div><p>Required fields are marked with <abbr title="required">*</abbr></p>
       <!-- See if maybe remove the ul and li -->
       <ul>
@@ -73,8 +81,18 @@
         <li>
           <button type="submit">Send your message</button>
         </li>
-      </ul></div>
+      </ul></div><img class="tree-drawing-contactpage" src="summertree.png" alt="a colored drawing of a tree with green leaves" />
     </form>
+    
+    <footer>
+      <ul>
+        <li><a href="index.html" class="active">home</a></li>
+        <li><a href="blogposts.html" class="">all blogposts</a></li>
+        <li><a href="about.html" class="">about me</a></li>
+        <li><a href="contact.html" class="">contact me</a></li>
+      </ul>
+      <a href="index.html">&copy;Hug a tree 2021</a>
+    </footer>
     <!-- <script src="js/displayError.js"></script> -->
     <script src="js/contact.js"></script>
   </body>
