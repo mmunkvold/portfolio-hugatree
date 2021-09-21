@@ -16,13 +16,13 @@ async function getAllPosts() {
       if (i === 10) {
         break;
       }
-      resultsContainer.innerHTML += `<div class="results"><div class="result-item"><a href="singlepost.html?id=${results[i].id}"><div><img  src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}"></img></div><div class="">${results[i].title.rendered} </a>${results[i].excerpt.rendered}</div></div></div>`;
+      resultsContainer.innerHTML += `<div class="results"><div class="result-item result-item-noborder"><a href="singlepost.html?id=${results[i].id}"><div><img class="noborder" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}"></img></div><div class="result-item"><h3>${results[i].title.rendered}</h3> ${results[i].excerpt.rendered}</a></div></div>`;
     }
     button.addEventListener("click", function () {
       console.log("i've been clicked");
       for (let i = 11; i < results.length; i++) {
         console.log("yayy");
-        resultsContainer.innerHTML += `<div class="results"><div class="result-item"><a href="singlepost.html?id=${results[i].id}"><div><img  src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}"></img></div><div class="">${results[i].title.rendered} </a>${results[i].excerpt.rendered}</div></div></div>`;
+        resultsContainer.innerHTML += `<div class="results"><div class="result-item result-item-noborder"><a href="singlepost.html?id=${results[i].id}"><div><img class="noborder" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}"></img></div><div class="result-item"><h3>${results[i].title.rendered}</h3> ${results[i].excerpt.rendered}</a></div></div>`;
         button.style.display = "none";
       }
     });

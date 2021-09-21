@@ -10,39 +10,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" />
     <!--  -->
     <!-- Stylesheets -->
-   
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/forms.css" />
-    <title>Contact me</title>
+    <link rel="icon" href="favicon.jpg">
+    <title>Contact Me</title>
   </head>
   <body>
     <header>
       <nav>
-        <button class="hamburger-icons">
-          <i class="fas fa-bars"></i>
-          <i class="fas fa-times"></i>
-        </button>
-
-        <div class="site-title">
-          <h1>Hug a Tree</h1>
-          <p class="subtitle">and be happy!</p>
-        </div>
-
-        <img id="logo" src="logo.png" alt="drawing of a person hugging a tree" />
+        <a href="index.html">
+          <div class="title-container">
+            <h1>Hug a Tree</h1>
+            <!-- Not h1 here? -->
+            <p class="subtitle-left">and be happy!</p>
+          </div>
+        </a>
+        <a href="index.html"><img id="logo" src="logo.png" alt="drawing of a person hugging a tree" /></a>
+        <p class="subtitle-right">and be happy!</p>
+        <form id="search-form" action="#" method="GET">
+          <label for="search"></label>
+          <input type="search" id="search" placeholder="Search this site..." />
+          <button id="search-btn" type="submit">go</button>
+        </form>
 
         <ul class="main-menu">
-          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link active" href="index.html">Home</a></li>
           <li><a class="nav-link" href="blogposts.html">All posts</a></li>
           <li><a class="nav-link" href="about.html">About</a></li>
-          <li><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
-        <div class="horizontal-line"></div>
+        <div class="horizontal-line-menu"></div>
       </nav>
     </header>
-    <h1>Contact me</h1>
+    <main>
+    <h1>Contact Me</h1>
     <div class="success">Thank you for contacting me! I'll get back to you soon.</div>
     <form action="" method="POST">
-      <div><p>Required fields are marked with <abbr title="required">*</abbr></p>
+      <div><p class="small-text">Required fields are marked with <abbr title="required">*</abbr></p>
       <!-- See if maybe remove the ul and li -->
       <ul>
         <li>
@@ -66,17 +70,31 @@
           <textarea name="message" id="message" cols="25" rows="8"></textarea>
           <div class="error">Message should be at least 26 characters long</div>
         </li>
-        <li>
+        <!-- <li>
           <label for="file">Attach your image: </label> <input type="file" name="file" id="file" accept="image/*;capture=camera" multiple />
           <div class="error">You can only send images in jpg, jpeg, or png.</div>
-        </li>
+        </li> -->
 
         <li>
           <button type="submit">Send your message</button>
         </li>
-      </ul></div>
+      </ul></div><img class="tree-drawing-contactpage" src="summertree.png" alt="a colored drawing of a tree with green leaves" />
     </form>
-    <!-- <script src="js/displayError.js"></script> -->
+  </main>
+  <footer>
+    <ul id="footer-menu">
+      <li><a href="index.html">home</a></li>
+      <li><a href="blogposts.html">blogposts</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="contact.html" class="active">contact</a></li>
+    </ul>
+    <div class="site-info">
+      <a class="copyright" href="index.html">&copy; Hug a Tree 2021</a>
+      <button id="totop">Top of page</button>
+    </div>
+  </footer>
+    <script src="js/components/displayError.js"></script>
     <script src="js/contact.js"></script>
+    <script src="js/components/to-topbutton.js"></script>
   </body>
 </html>

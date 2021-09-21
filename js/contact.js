@@ -17,8 +17,12 @@ const subjectError = document.querySelector("#subject + div.error");
 const message = document.getElementById("message");
 const messageError = document.querySelector("#message + div.error");
 
-const file = document.getElementById("file");
-const fileError = document.querySelector("#file + div.error");
+/* const file = document.getElementById("file");
+const fileError = document.querySelector("#file + div.error"); */
+
+//get this to work, or just remove the file upload from the form
+/* const fileUpload = document.getElementById("file");
+fileUpload.required = false; */
 
 const showSuccessMessage = document.querySelector(".success");
 
@@ -48,18 +52,18 @@ function validateForm(event) {
   } else {
     messageError.style.display = "block";
   }
-  if (validateFile(file.value) === true) {
+  /* if (validateFile(file.value) === true) {
     fileError.style.display = "none";
   } else {
     fileError.style.display = "block";
-  }
+  } */
 
   if (
-    checkLength(fullname.value, 6) &&
+    checkLength(fullName.value, 6) &&
     validateEmail(email.value) &&
     checkLength(subject.value, 16) &&
-    checkLength(message.value, 26) &&
-    validateFile(file.value) === true
+    checkLength(message.value, 26) /* &&
+    validateFile(file.value) */ === true
   ) {
     showSuccessMessage.style.display = "block";
     form.style.display = "none";
@@ -84,8 +88,8 @@ function validateEmail(email) {
   return patternMatches;
 }
 
-function validateFile(file) {
+/* function validateFile(file) {
   const regEx = /(\.jpg|\.jpeg|\.png)$/i;
   const patternMatches = regEx.test(file);
   return patternMatches;
-}
+} */

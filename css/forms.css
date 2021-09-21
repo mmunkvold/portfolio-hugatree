@@ -1,12 +1,8 @@
-ul {
-  list-style: none;
-}
-
 form {
   background: #f9f9f9;
   border: none;
-  width: 700px;
-  padding: 1rem;
+  width: 360px;
+  padding: 1em 0;
   color: #000;
   /*  margin-top: 1em; */
   box-shadow: 2px 2px 2px #b7b4b4;
@@ -17,14 +13,14 @@ form {
 
 /* This inherit from the parent's values */
 input,
-textarea,
-button {
+textarea {
   font-family: inherit;
   font-size: 80%;
-  width: 200px;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+  width: 280px;
+  margin: 0.5em 0;
+  /*  padding: 0;
+  margin: 0; */
+  /* box-sizing: border-box; */
 }
 
 input:focus,
@@ -32,25 +28,63 @@ textarea:focus {
   background: rgba(0, 0, 0, 0.1); /* NB! Bytt denne fargen! */
 }
 
+/* Stops IE from showing a scroll bar when not needed */
+textarea {
+  overflow: auto;
+  background-image: url("../summertree.png");
+  background-repeat: no-repeat;
+  background-size: 15%;
+  opacity: 30%;
+  background-position: bottom right;
+}
+
 button {
   background: green;
-  padding: 0.3em;
   color: white;
-  margin-top: 10px;
-  border-radius: 5%;
-  text-transform: uppercase;
+  /*  margin-top: 10px;
+  border-radius: 5%; */
+  /*  width: 80px; */
+  padding: 0.4em;
+  margin-left: 0.3em;
+  border: none;
+  text-transform: lowercase;
+  letter-spacing: 0.07em;
   font-size: 1rem;
   cursor: pointer;
+}
+
+.seemore-btn {
+  margin: 2em 33% 6em;
 }
 
 button:hover,
 button:focus {
   background: #707070;
+  color: #fff;
 }
 
-/* Stops IE from showing a scroll bar when not needed */
-textarea {
-  overflow: auto;
+#search-form {
+  width: 100%;
+  background: #fff;
+  box-shadow: none;
+  /*  margin-bottom: 2em; */
+  border-radius: 0.2rem;
+  cursor: pointer;
+  /* padding: 1em; */
+  position: absolute;
+  top: 6em;
+  text-align: center;
+  /* left: 2em; */
+}
+
+#search {
+  font-family: inherit;
+  width: 250px;
+}
+
+#search-btn {
+  /*   background-color: hotpink; */
+  max-width: 50px;
 }
 
 /* Styling the error handling on the form */
@@ -84,5 +118,52 @@ input:focus:invalid {
 @media (min-width: 600px) {
   form {
     display: flex;
+    flex-direction: row;
+    width: 750px;
+  }
+  input,
+  textarea {
+    width: 320px;
+  }
+  .post-comment {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+  }
+
+  #search-form {
+    width: 300px;
+    top: 5em;
+    left: 18em;
+    padding: 0;
+  }
+
+  .seemore-btn {
+    margin: 2em 45% 6em;
+  }
+}
+
+@media (min-width: 1000px) {
+  #search-form {
+    width: 250px;
+    top: 1em;
+    left: 27em;
+
+    /* border: 2px solid red; */
+  }
+}
+
+@media (min-width: 1200px) {
+  #search-form {
+    width: 350px;
+
+    left: 33em;
+
+    /* border: 2px solid red; */
+  }
+}
+@media (min-width: 1700px) {
+  #search-form {
+    left: 45em;
   }
 }

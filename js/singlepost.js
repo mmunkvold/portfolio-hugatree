@@ -32,7 +32,7 @@ getSinglePost();
 function createHTML(results) {
   console.log("just hlhl");
 
-  singlePostContainer.innerHTML = `<div class="singlepost"><h1>${results.title.rendered}</h1>${results.content.rendered}</div></div>`;
+  singlePostContainer.innerHTML = `<div class="singlepost"><h1>${results.title.rendered}</h1><div>${results.content.rendered}</div></div>`;
 
   const openModal = document.querySelector(".wp-block-image");
   console.log(openModal);
@@ -43,7 +43,7 @@ function createHTML(results) {
   });
   window.addEventListener("click", function (event) {
     if (event.target == overlay) {
-      console.log("close x clicked");
+      /* console.log("close x clicked"); */
       overlay.style.display = "none";
     }
   });
