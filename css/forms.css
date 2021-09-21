@@ -51,6 +51,11 @@ button {
   letter-spacing: 0.07em;
   font-size: 1rem;
   cursor: pointer;
+  padding: 1em;
+  position: absolute;
+  top: 6em;
+  text-align: center;
+  /* left: 2em; */
 }
 
 .seemore-btn {

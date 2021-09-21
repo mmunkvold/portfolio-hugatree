@@ -24,6 +24,10 @@ const fileError = document.querySelector("#file + div.error"); */
 /* const fileUpload = document.getElementById("file");
 fileUpload.required = false; */
 
+//get this to work, or just remove the file upload from the form
+/* const fileUpload = document.getElementById("file");
+fileUpload.required = false; */
+
 const showSuccessMessage = document.querySelector(".success");
 
 function validateForm(event) {

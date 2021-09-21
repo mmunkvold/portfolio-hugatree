@@ -420,6 +420,78 @@ footer a {
 .comment-name {
   font-weight: bolder;
 }
+/* ================
+    ABOUT PAGE 
+  =================== */
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================
+    BLOG POSTS PAGE 
+  =================== */
+
+.results {
+  display: grid;
+  gap: 1em;
+
+  /* border: 5px solid pink; */
+}
+
+.result-item {
+  border: 2px solid grey;
+  margin: 0 auto;
+  width: 80%;
+}
+.result-item-noborder {
+  border: none;
+}
+
+.results img {
+  width: 80%;
+  border: 2px solid grey;
+  border-bottom: none;
+}
+
+.results h3 {
+  text-align: left;
+  padding: 0 1em;
+  margin: 0.2em 0 0;
+}
+
+/* ================
+    SINGLE POST PAGE 
+  =================== */
+
+.singlepost {
+  margin: 0 auto;
+}
+
+.singlepost img {
+  height: auto;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+}
+.comment {
+  border: 1px solid grey;
+  width: 300px;
+}
+.comment,
+.reply {
+  margin: 1em auto;
+}
+.reply {
+  border: 2px solid green;
+  width: 250px;
+}
+.comment-name {
+  font-weight: bolder;
+}
 
 /* ================
     CONTACT PAGE
@@ -582,7 +654,7 @@ figcaption {
 
 .carousel-actions {
   display: flex;
-  width: 100%;
+  width: 80%;
   justify-content: space-between;
   margin: 0 auto;
   position: relative;
@@ -893,6 +965,70 @@ main {
     flex: 0;
     /* border: 2px solid hotpink; */
   }
+
+  /* .featured {
+    flex-direction: row;
+  } */
+
+  .results {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .result-item {
+    width: 700px;
+    display: flex;
+  }
+
+  .results img {
+    width: 100%;
+    border-right: none;
+  }
+  .singlepost {
+    margin: 0 auto;
+    width: 70ch;
+  }
+
+  .singlepost img {
+    max-width: 300px;
+  }
+
+  .comment-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .comment {
+    width: 900px;
+  }
+
+  .reply {
+    width: 800px;
+  }
+
+  .random-quote {
+    max-width: 100%;
+  }
+  .vertical-line {
+    border-right: 2px solid green;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /*  padding: 0px 20px; */
+    height: 300px;
+    position: absolute;
+    left: 50%;
+  }
+
+  .tree-drawing-contactpage {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    right: 27em;
+    top: 24em;
+  }
 }
 
 /* =========================== */
@@ -911,7 +1047,6 @@ main {
     width: 65ch;
     padding: 0 1em;
   }
-
   .about-container img {
     padding: 0 3em;
   }
