@@ -53,7 +53,7 @@ async function getLatestPosts() {
     for (let i = firstPost; i < firstPost + 4; i++) {
       console.log(i);
       //createHTML();
-      latestPostContainer.innerHTML += `<div class="latest-carousel"><div class="carousel-item"><a href="singlepost.html?id=${results[i].id}"><h3>${results[i].title.rendered}</h3> <img class="" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}"></img></a><div>${results[i].excerpt.rendered}</div></div></div>`;
+      latestPostContainer.innerHTML += `<div class="latest-carousel"><div class="carousel-item"><a href="singlepost.html?id=${results[i].id}"><h3>${results[i].title.rendered}</h3><img class="" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}"></img></a><div>${results[i].excerpt.rendered}</div></div></div>`;
       previousBtn.style.display = "block";
       nextBtn.style.display = "block";
     }
@@ -69,7 +69,7 @@ async function getLatestPosts() {
 
       for (let i = firstPost; i < firstPost + 4; i++) {
         console.log(i);
-        latestPostContainer.innerHTML += `<div class="latest-carousel"><div class="carousel-item"><a href="singlepost.html?id=${results[i].id}"><h3>${results[i].title.rendered}</h3> <img class="" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}"></img></a><div>${results[i].excerpt.rendered}</div></div></div>`;
+        latestPostContainer.innerHTML += `<div class="latest-carousel"><div class="carousel-item"><a href="singlepost.html?id=${results[i].id}"><h3>${results[i].title.rendered}</h3><img class="" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}"></img></a><div>${results[i].excerpt.rendered}</div></div></div>`;
         previousBtn.style.display = "block";
         nextBtn.style.display = "block";
       }
@@ -85,7 +85,7 @@ async function getLatestPosts() {
       }
       for (let i = firstPost; i < firstPost + 4; i++) {
         console.log(i);
-        latestPostContainer.innerHTML += `<div class="latest-carousel"><div class="carousel-item"><a href="singlepost.html?id=${results[i].id}"><h3>${results[i].title.rendered}</h3> <img class="" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}"></img></a><div>${results[i].excerpt.rendered}</div></div></div>`;
+        latestPostContainer.innerHTML += `<div class="latest-carousel"><div class="carousel-item"><a href="singlepost.html?id=${results[i].id}"><h3>${results[i].title.rendered}</h3><img class="" src="${results[i]._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}"></img></a><div>${results[i].excerpt.rendered}</div></div></div>`;
         previousBtn.style.display = "block";
         nextBtn.style.display = "block";
       }

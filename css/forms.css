@@ -1,4 +1,5 @@
-form {
+#contact-form,
+#comment-form {
   background: #f9f9f9;
   border: none;
   width: 360px;
@@ -51,15 +52,15 @@ button {
   letter-spacing: 0.07em;
   font-size: 1rem;
   cursor: pointer;
-  padding: 1em;
-  position: absolute;
-  top: 6em;
+  padding: 0.5em;
+  /* position: absolute; */
+  /* top: 6em; */
   text-align: center;
   /* left: 2em; */
 }
 
 .seemore-btn {
-  margin: 2em 33% 6em;
+  margin: 2em 33% 4em;
 }
 
 button:hover,
@@ -121,54 +122,26 @@ input:focus:invalid {
   =================== */
 
 @media (min-width: 600px) {
-  form {
-    display: flex;
-    flex-direction: row;
-    width: 750px;
-  }
-  input,
-  textarea {
-    width: 320px;
-  }
-  .post-comment {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-  }
-
   #search-form {
-    width: 300px;
-    top: 5em;
-    left: 18em;
-    padding: 0;
+    top: 4.5em;
+    text-align: right;
+    padding-right: 1em;
   }
 
   .seemore-btn {
-    margin: 2em 45% 6em;
+    margin: 2em 45% 1em;
   }
 }
 
 @media (min-width: 1000px) {
-  #search-form {
-    width: 250px;
-    top: 1em;
-    left: 27em;
-
-    /* border: 2px solid red; */
+  #contact-form {
+    display: flex;
+    flex-direction: row;
+    width: 700px;
   }
 }
 
 @media (min-width: 1200px) {
-  #search-form {
-    width: 350px;
-
-    left: 33em;
-
-    /* border: 2px solid red; */
-  }
 }
 @media (min-width: 1700px) {
-  #search-form {
-    left: 45em;
-  }
 }
