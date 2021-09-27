@@ -4,37 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Fonts -->
+    <meta name="description" content="Search Result Page - Where you will find search results" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" />
-    <!--  -->
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/forms.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Search Results</title>
-    <!-- Font awesome for icons -->
-    <script src="https://kit.fontawesome.com/ff8ec4a7db.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="icon" href="favicon.png" sizes="16x16 32x32" type="image/png" />
+    <title>Search Result Page | Hug a Tree</title>
   </head>
   <body>
     <header>
       <nav>
         <a href="index.html">
           <div class="title-container">
-            <h1>Hug a Tree</h1>
-            <!-- Not h1 here? -->
+            <p>Hug a Tree</p>
             <p class="subtitle-left">and be happy!</p>
           </div>
         </a>
-        <a href="index.html"><img id="logo" src="logo.png" alt="drawing of a person hugging a tree" /></a>
+        <div class="logo">
+          <a href="index.html"><img id="logo_light" src="logo_light.png" alt="drawing of a person hugging a tree" /></a>
+          <a href="index.html"><img id="logo_dark" src="logo_dark.png" alt="drawing of a person hugging a tree" /></a>
+        </div>
         <p class="subtitle-right">and be happy!</p>
-        <form id="search-form" action="#" method="GET">
-          <label for="search"></label>
+        <form class="search-form" action="search.html" method="GET">
+          <label for="search" aria-label="Search"></label>
           <input type="search" id="search" placeholder="Search this site..." />
           <button id="search-btn" type="submit">go</button>
         </form>
-
         <ul class="main-menu">
           <li><a class="nav-link active" href="index.html">Home</a></li>
           <li><a class="nav-link" href="blogposts.html">All posts</a></li>
@@ -44,6 +41,16 @@
         <div class="horizontal-line-menu"></div>
       </nav>
     </header>
+    <main>
+      <h1>Search Result</h1>
+      <div class="search-result-container">
+        <div class="search-result">
+          <div class="loading">
+            <div class="loading-indicator">Loading...</div>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer>
       <ul id="footer-menu">
         <li><a href="index.html">home</a></li>
@@ -57,5 +64,7 @@
       </div>
     </footer>
     <script src="js/components/to-topbutton.js"></script>
+    <script src="js/components/displayError.js"></script>
+    <script src="js/components/search.js"></script>
   </body>
 </html>

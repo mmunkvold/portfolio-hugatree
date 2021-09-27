@@ -4,39 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Fonts -->
+    <meta name="description" content="Hug a Tree - A blog about tree hugging" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" />
-    <!--  -->
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/forms.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="favicon.png" sizes="16x16 32x32" type="image/png" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Hug a Tree</title>
-    <!-- Font awesome for icons -->
-    <script src="https://kit.fontawesome.com/ff8ec4a7db.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <title>Home | Hug a Tree</title>
   </head>
   <body>
     <header>
       <nav>
         <a href="index.html">
           <div class="title-container">
-            <h1>Hug a Tree</h1>
-            <!-- Not h1 here? -->
+            <p>Hug a Tree</p>
             <p class="subtitle-left">and be happy!</p>
           </div>
         </a>
-        <a href="index.html"><img id="logo" src="logo.png" alt="drawing of a person hugging a tree" /></a>
+        <div class="logo">
+          <a href="index.html"><img id="logo_light" src="logo_light.png" alt="drawing of a person hugging a tree" /></a>
+          <a href="index.html"><img id="logo_dark" src="logo_dark.png" alt="drawing of a person hugging a tree" /></a>
+        </div>
         <p class="subtitle-right">and be happy!</p>
-        <form id="search-form" action="#" method="GET">
-          <label for="search"></label>
-          <input type="search" id="search" placeholder="Search this site..." />
-          <button id="search-btn" type="submit">go</button>
-        </form>
-
-        <form id="search-form" action="#" method="GET">
-          <label for="search"></label>
+        <form class="search-form" action="search.html" method="GET">
+          <label for="search" aria-label="Search"></label>
           <input type="search" id="search" placeholder="Search this site..." />
           <button id="search-btn" type="submit">go</button>
         </form>
@@ -51,38 +43,45 @@
     </header>
     <div class="wrapper">
       <main>
-        <div class="newest-label">Newest Post</div>
-        <div class="newest">
-          <div>Loading...</div>
+        <div class="newest-container">
+          <div class="newest">
+            <div class="loading">
+              <div class="loading-indicator">Loading...</div>
+            </div>
+          </div>
         </div>
-
         <div class="latest-wrapper">
           <h2>Latest Posts</h2>
           <div class="latest-carousel">
-            <div>Loading...</div>
-            <div class="carousel-item"></div>
+            <div class="carousel-item">
+              <div class="loading">
+                <div class="loading-indicator">Loading...</div>
+              </div>
+            </div>
           </div>
           <div class="carousel-actions">
-            <button class="prev-btn" aria-label="Previous slide"><</button>
-            <button class="next-btn" aria-label="Next slide">></button>
+            <button class="prev-btn" aria-label="Previous 4 posts">&lt;</button>
+            <div class="dots dot0"></div>
+            <div class="dots dot1"></div>
+            <div class="dots dot2"></div>
+            <div class="dots dot3"></div>
+            <button class="next-btn" aria-label="Next 4 posts">&gt;</button>
           </div>
         </div>
-
         <h2>Get started in 1-2-3</h2>
         <div class="get-started">
-         <div class="get-started-item"><img src="images/1.jpg" alt="a road that leads into a forest"></div>
-         <div class="get-started-item"><img src="images/2.jpg" alt="a big old tree"></div>
-         <div class="get-started-item"><img src="images/3.jpg" alt="a woman in black flowery dress hugging a big tree"></div>
-         
+          <div class="get-started-item"><img src="images/getstarted/1.jpg" alt="a road that leads into a forest" /></div>
+          <div class="get-started-item"><img src="images/getstarted/2.jpg" alt="a big old tree" /></div>
+          <div class="get-started-item"><img src="images/getstarted/3.jpg" alt="a woman in black flowery dress hugging a big tree" /></div>
         </div>
-
         <div class="featured-container">
           <h2>Featured Posts</h2>
           <div class="featured">
-            <div>Loading...</div>
+            <div class="loading">
+              <div class="loading-indicator">Loading...</div>
+            </div>
           </div>
         </div>
-
       </main>
       <aside>
         <div class="about-box">
@@ -93,13 +92,17 @@
           <p>Why don't you join me?</p>
           <p class="small-text"><a href="about.html">Read more about my tree hugging journey...</a></p>
         </div>
-        <img src="summertree.png" alt="a colored drawing of a tree with green leaves" />
-        <div class="random-quote">
-          <div>Loading...</div>
-        </div>
         <div>
-          <div class="category-list"><h3>Categories</h3>
-          <div class="categories"></div>
+          <div class="category-list">
+            <h3>Categories:</h3>
+            <div class="categories"></div>
+          </div>
+        </div>
+        <img class="tree-drawing" src="graphic/summertree.png" alt="a colored drawing of a tree with green leaves" />
+        <div class="random-quote">
+          <div class="loading">
+            <div class="loading-indicator">Loading...</div>
+          </div>
         </div>
       </aside>
     </div>
@@ -131,7 +134,6 @@
         <img src="images/gallery/redjacket.jpg" alt="a man wearing a red jacket hugging a tall tree" />
       </div>
     </div>
-
     <footer>
       <ul id="footer-menu">
         <li><a href="index.html" class="active">home</a></li>
@@ -144,19 +146,9 @@
         <div><button id="totop">Top of page</button></div>
       </div>
     </footer>
-
-    <!-- <script src="js/components/search.js"></script> -->
-    <!--  <script src="js/components/mainmenu.js"></script> -->
-
-    <!-- <script src="js/carousellatestpost.js"></script> -->
     <script src="js/components/to-topbutton.js"></script>
-
-    <script src="js/components/search.js"></script>
-    <script src="js/components/mainmenu.js"></script>
-    <script src="js/index.js"></script>
-    <!-- <script src="js/carousellatestpost.js"></script> -->
-    <!-- <script src="js/components/categorylist.js"></script> -->
-
+    <script src="js/components/displayError.js"></script>
     <script src="js/randomquotes.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
